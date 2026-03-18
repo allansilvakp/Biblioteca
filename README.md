@@ -1,58 +1,51 @@
-📚Sistema de Cadastro de Livros
-Descrição
+📚 Sistema de Cadastro de Livros
 
-O Sistema de Cadastro de Livros é um aplicativo em Java 25 que permite gerenciar uma coleção de livros diretamente pelo terminal.
-Ele suporta cadastro, listagem, busca, atualização e exclusão de livros, mantendo as informações organizadas em arquivos locais.
+Um aplicativo em Java 25 para gerenciar sua coleção de livros diretamente pelo terminal.
+Permite cadastrar, listar, buscar, atualizar e deletar livros com facilidade e suporte a gêneros em português e inglês.
 
-O sistema foi projetado para ser intuitivo para usuários brasileiros, mas o enum de gêneros também aceita entradas em inglês.
+✨ Funcionalidades
 
-Funcionalidades
+📝 Cadastrar livro
 
-Cadastrar livro
+Informe: título, autor, gênero e número de páginas
 
-Solicita ao usuário: título, autor, gênero e número de páginas.
+Validação automática dos dados
 
-Valida os dados antes de salvar.
+Armazena cada livro em arquivos .txt no diretório C:\BooksRegistred\
 
-Os livros são registrados no diretório local C:\BooksRegistred\ como arquivos .txt.
+📋 Listar livros
 
-Listar livros
+Mostra todos os livros cadastrados
 
-Exibe todos os livros cadastrados.
+Exibe: Título, Autor, Gênero e Páginas
 
-Mostra: Título, Autor, Gênero e Número de Páginas.
+🔍 Buscar livro por título
 
-O gênero é exibido em português.
+Pesquisa por palavra-chave (não diferencia maiúsculas de minúsculas)
 
-Buscar livro por título
+Retorna todos os livros correspondentes ou "Não encontrado!"
 
-Permite pesquisar livros por palavra-chave no título.
+✏️ Atualizar livro
 
-A busca não diferencia maiúsculas de minúsculas.
+Permite alterar título, autor, gênero e páginas
 
-Se nenhum livro for encontrado, o sistema avisa: "Não encontrado!".
+Pressione ENTER para manter o valor atual
 
-Atualizar livro
+Aceita o gênero em português ou inglês
 
-Permite alterar qualquer informação do livro: título, autor, gênero ou número de páginas.
+🗑️ Deletar livro
 
-O usuário pode apertar ENTER para manter o valor atual.
+Exibe todos os livros com números de referência
 
-Suporta digitar o gênero em português ou inglês.
+Escolha qual livro remover
 
-Deletar livro
+O arquivo correspondente é excluído
 
-Exibe todos os livros cadastrados com um número de referência.
+🚪 Sair
 
-O usuário escolhe qual livro deseja remover.
+Encerra o sistema de forma segura
 
-O arquivo correspondente é excluído do diretório local.
-
-Sair
-
-Encerra o sistema de forma segura.
-
-Estrutura do Projeto
+🏗 Estrutura do Projeto
 src/
  ├─ app/
  │   └─ Program.java        # Classe principal que inicia o menu
@@ -63,48 +56,45 @@ src/
  ├─ entities/
  │   └─ Book.java           # Classe modelo do livro
  ├─ enums/
- │   └─ BookGenre.java      # Enumeração de gêneros de livros (português/inglês)
+ │   └─ BookGenre.java      # Enumeração de gêneros de livros (pt/en)
  ├─ repository/
- │   └─ BookRepository.java # Gerencia a leitura/escrita de arquivos
+ │   └─ BookRepository.java # Gerencia leitura/escrita de arquivos
  └─ exceptions/
      └─ BookException.java  # Tratamento de exceções específicas
-Enumeração de Gêneros (BookGenre)
-
-O sistema suporta os seguintes gêneros, em português e inglês:
-
+📖 Gêneros Disponíveis (BookGenre)
 Enum Java	Português	Inglês
 FICTION	Ficção	Fiction
 TERROR	Terror	Horror
 ROMANCE	Romance	Romance
 ADVENTURE	Aventura	Adventure
 
-O usuário pode digitar qualquer um desses nomes em português ou inglês ao cadastrar ou atualizar livros.
+O usuário pode digitar português ou inglês ao cadastrar ou atualizar livros.
 
-Tecnologias Utilizadas
+🛠 Tecnologias Utilizadas
 
 Java 25
 
-Scanner para entrada de dados pelo terminal
+Scanner (entrada de dados pelo terminal)
 
-Enum para representação de gêneros de livros
+Enum (para gêneros de livros)
 
 Arquivos de texto (.txt) para persistência local
 
-Como Executar
+▶️ Como Executar
 
-Clone o projeto ou faça download do código.
+Clone ou baixe o projeto
 
-Abra o projeto em uma IDE compatível com Java (IntelliJ IDEA, Eclipse, VSCode com extensão Java).
+Abra em uma IDE compatível (IntelliJ, Eclipse, VSCode)
 
-Compile todas as classes.
+Compile todas as classes
 
-Execute a classe Program:
+Execute Program.java:
 
 java app.Program
 
-O menu será exibido no terminal. Escolha a opção desejada digitando o número correspondente e pressione ENTER.
+O menu será exibido e você poderá interagir digitando números das opções.
 
-Exemplo de Uso
+🖼 Exemplo de Uso
 ===============================================
 1 - Cadastrar livro
 2 - Listar livros
@@ -113,11 +103,11 @@ Exemplo de Uso
 5 - Sair
 Escolha uma opção: 1
 
-Informe o título: O Senhor dos Anéis
-Informe o autor: J.R.R. Tolkien
-Informe o gênero: Ficção
-Informe a quantidade de páginas: 1178
-LIVRO CADASTRADO!
+📝 Informe o título: O Senhor dos Anéis
+📝 Informe o autor: J.R.R. Tolkien
+📝 Informe o gênero: Ficção
+📝 Informe a quantidade de páginas: 1178
+✅ LIVRO CADASTRADO!
 
 ===============================================
 1 - Cadastrar livro
@@ -127,10 +117,17 @@ LIVRO CADASTRADO!
 5 - Sair
 Escolha uma opção: 2
 
+📋 Lista de livros:
 1 - Title: O Senhor dos Anéis - Author: J.R.R. Tolkien - Genre: Ficção - Pages: 1178
-Observações
+⚠️ Observações
 
-Certifique-se de que o diretório C:\BooksRegistred\ exista, ou o sistema poderá falhar ao tentar salvar/excluir livros.
+Certifique-se de que o diretório C:\BooksRegistred\ exista antes de cadastrar ou deletar livros.
+
+Entradas do menu devem ser números inteiros.
+
+Pressionar ENTER ao atualizar mantém o valor atual.
+
+Busca e entrada de gênero não diferenciam maiúsculas de minúsculas.
 
 As opções do menu devem ser digitadas como números inteiros. Entradas inválidas gerarão a mensagem "Opção inválida!".
 
