@@ -1,4 +1,4 @@
-Sistema de Cadastro de Livros
+📚Sistema de Cadastro de Livros
 Descrição
 
 O Sistema de Cadastro de Livros é um aplicativo em Java 25 que permite gerenciar uma coleção de livros diretamente pelo terminal.
